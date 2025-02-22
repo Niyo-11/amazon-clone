@@ -1,7 +1,9 @@
 import React from "react";
 import classes from "./header.module.css";
+import LowerHeader from "./LowerHeader";
 import { SlLocationPin } from "react-icons/sl";
-import { BsSearch } from "react-icons/bs";import { FiShoppingCart } from "react-icons/fi";
+import { BsSearch } from "react-icons/bs";
+import { BiCart } from "react-icons/bi";
 
 const Header = () => {
 	return (
@@ -37,16 +39,17 @@ const Header = () => {
 					</div>
 					{/* other section */}
 					<div className={classes.order__container}>
-						<a href="">
-							{/* <img
-								src="https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg"
-								alt=""
-							/> */}
-						</a>
-
-						<select name="" id="">
-							<option value="">Amh</option>
-						</select>
+						<div className={classes.language}>
+							<a href="">
+								<img
+									src="https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg"
+									alt=""
+								/>
+							</a>
+							<select name="" id="">
+								<option value="">Amh</option>
+							</select>
+						</div>
 
 						{/* three components  */}
 						<a href="">
@@ -61,13 +64,17 @@ const Header = () => {
 							<span>& Orders</span>
 						</a>
 						{/* cart */}
-						<a to={"/cart"}>
-							<FiShoppingCart />
-							<span>0</span>
-						</a>
+						<div>
+							<a href="" className={classes.cart}>
+								<BiCart size={40} />
+								<span>0</span>
+								<p className={classes.txt}>Cart</p>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
+			<LowerHeader/>
 		</>
 	);
 };
