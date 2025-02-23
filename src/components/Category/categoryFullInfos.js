@@ -8,7 +8,7 @@ export const categoryInfos = [
 	},
 	{
 		id: 2,
-		title: "Discover fashion trends",
+		title: "Fashion Trends",
 		name: "women's clothing",
 		imgLink: "https://m.media-amazon.com/images/I/41J4oV2mKVL._AC_UL320_.jpg",
 	},
